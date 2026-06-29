@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://qmedia.in/sitemap.xml

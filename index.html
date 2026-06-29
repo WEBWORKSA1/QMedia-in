@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quantum Media — India's intelligence brief on quantum, AI infrastructure & deep tech</title>
+<meta name="description" content="Quantum Media (Qmedia.in) covers the business of quantum computing, AI infrastructure, semiconductors and deep tech in India — funding, research-to-commercialization, policy and the people moving the frontier." />
+<meta name="keywords" content="quantum computing India, deep tech India, AI infrastructure, National Quantum Mission, semiconductors India, deep tech funding, quantum startups" />
+<meta name="author" content="Quantum Media" />
+<meta property="og:title" content="Quantum Media — India's deep-tech intelligence brief" />
+<meta property="og:description" content="The business of quantum, AI infrastructure and deep tech in India." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://qmedia.in" />
+<link rel="canonical" href="https://qmedia.in" />
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3216322039296830" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --void:#0B0E1A;
+    --void-2:#11152600;
+    --panel:#141A2E;
+    --panel-2:#1B2238;
+    --cyan:#22D3EE;
+    --violet:#7C5CFF;
+    --white:#F2F5FF;
+    --slate:#8A93A8;
+    --slate-dim:#5C6478;
+    --line:rgba(124,92,255,.18);
+    --line-2:rgba(34,211,238,.16);
+    --glow-cyan:rgba(34,211,238,.35);
+    --glow-violet:rgba(124,92,255,.35);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--void);
+    color:var(--white);
+    font-family:'Newsreader',Georgia,serif;
+    font-size:18px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .disp{font-family:'Space Grotesk',sans-serif}
+
+  /* ---------- TOP BRAND BAR (Layout B: brand/nav first) ---------- */
+  header.topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(11,14,26,.82);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.7rem;letter-spacing:-.02em;display:flex;align-items:baseline;gap:1px}
+  .brand .q{color:var(--cyan);text-shadow:0 0 18px var(--glow-cyan)}
+  .brand .m{color:var(--white)}
+  .brand .tld{color:var(--slate-dim);font-size:1.05rem;font-weight:500;margin-left:2px}
+  nav.main{display:flex;gap:30px;align-items:center}
+  nav.main a{font-family:'Space Grotesk',sans-serif;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--slate);transition:color .2s}
+  nav.main a:hover{color:var(--cyan)}
+  .nav-cta{border:1px solid var(--cyan);color:var(--cyan)!important;padding:9px 16px;border-radius:2px;transition:all .2s}
+  .nav-cta:hover{background:var(--cyan);color:var(--void)!important;box-shadow:0 0 20px var(--glow-cyan)}
+  .burger{display:none;background:none;border:0;color:var(--white);font-size:1.5rem;cursor:pointer}
+
+  /* ---------- BILLBOARD (first content block, top of page) ---------- */
+  .billboard{
+    background:linear-gradient(135deg,#0E1224 0%,#161C36 60%,#1A1340 100%);
+    border-bottom:1px solid var(--line);
+    position:relative;overflow:hidden;
+  }
+  .billboard::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(600px 300px at 18% 30%,var(--glow-violet),transparent 60%),
+               radial-gradient(500px 260px at 82% 70%,var(--glow-cyan),transparent 60%);
+    opacity:.5;pointer-events:none;
+  }
+  .billboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;z-index:2}
+  .bb-video{padding:34px 34px 34px 0;display:flex;align-items:center}
+  .bb-video .frame{
+    width:100%;aspect-ratio:16/9;border-radius:6px;overflow:hidden;
+    border:1px solid var(--line-2);box-shadow:0 18px 60px rgba(0,0,0,.5);
+    background:#000;
+  }
+  .bb-video iframe{width:100%;height:100%;border:0;display:block}
+  .bb-cta{padding:34px 0 34px 40px;display:flex;flex-direction:column;justify-content:center;gap:14px;border-left:1px solid var(--line)}
+  .bb-eyebrow{display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan)}
+  .megaphone{display:inline-block;font-size:1.5rem;animation:wobble 2.6s ease-in-out infinite;transform-origin:70% 70%}
+  @keyframes wobble{0%,100%{transform:rotate(0)}10%{transform:rotate(-12deg)}20%{transform:rotate(10deg)}30%{transform:rotate(-8deg)}40%{transform:rotate(6deg)}50%{transform:rotate(0)}}
+  .bb-cta h3{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:600;line-height:1.18;letter-spacing:-.01em}
+  .bb-cta p{font-size:.98rem;color:var(--slate);line-height:1.55}
+  .bb-btn{
+    align-self:flex-start;margin-top:4px;
+    font-family:'Space Grotesk',sans-serif;font-size:.86rem;letter-spacing:.03em;
+    background:linear-gradient(90deg,var(--cyan),var(--violet));
+    color:var(--void);font-weight:600;padding:12px 22px;border-radius:3px;
+    position:relative;transition:transform .2s,box-shadow .2s;
+    box-shadow:0 0 0 rgba(34,211,238,0);
+  }
+  .bb-btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px var(--glow-cyan)}
+
+  /* ---------- HERO: qubit state-grid signature ---------- */
+  .hero{position:relative;padding:84px 0 70px;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+  .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--violet);margin-bottom:20px}
+  .hero h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(2.4rem,5vw,3.7rem);line-height:1.04;letter-spacing:-.025em;margin-bottom:22px}
+  .hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero-lede{font-size:1.18rem;color:var(--slate);line-height:1.62;max-width:30em;margin-bottom:28px}
+  .hero-stats{display:flex;gap:34px;flex-wrap:wrap}
+  .hstat .n{font-family:'JetBrains Mono',monospace;font-size:1.55rem;font-weight:700;color:var(--white)}
+  .hstat .n .u{color:var(--cyan);font-size:1rem}
+  .hstat .l{font-family:'Space Grotesk',sans-serif;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--slate-dim);margin-top:3px}
+
+  /* qubit lattice */
+  .qubit-stage{position:relative;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+  .qubit-stage::before{content:"";position:absolute;width:78%;height:78%;border-radius:50%;background:radial-gradient(circle,var(--glow-violet),transparent 68%);filter:blur(20px);opacity:.7}
+  .lattice{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;width:100%;max-width:380px}
+  .qubit{
+    aspect-ratio:1/1;border:1px solid var(--line-2);border-radius:6px;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--slate);
+    background:rgba(20,26,46,.6);position:relative;transition:all .5s ease;
+  }
+  .qubit.on{color:var(--cyan);border-color:var(--cyan);box-shadow:0 0 14px var(--glow-cyan);background:rgba(34,211,238,.06)}
+  .qubit.sup{color:var(--violet);border-color:var(--violet);box-shadow:0 0 14px var(--glow-violet);background:rgba(124,92,255,.06)}
+  .qubit-cap{position:absolute;bottom:-34px;left:0;right:0;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.1em;color:var(--slate-dim)}
+
+  /* ---------- SECTION SHELL ---------- */
+  section.block{padding:74px 0;border-bottom:1px solid var(--line)}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:38px;gap:20px;flex-wrap:wrap}
+  .sec-kicker{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+  .sec-title{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(1.7rem,3.4vw,2.3rem);letter-spacing:-.02em;line-height:1.1}
+  .sec-link{font-family:'Space Grotesk',sans-serif;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--slate);border-bottom:1px solid var(--line);padding-bottom:3px;transition:color .2s,border-color .2s;white-space:nowrap}
+  .sec-link:hover{color:var(--cyan);border-color:var(--cyan)}
+
+  /* ---------- COVERAGE CARDS ---------- */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{
+    background:linear-gradient(160deg,var(--panel),var(--panel-2));
+    border:1px solid var(--line);border-radius:8px;overflow:hidden;
+    display:flex;flex-direction:column;transition:transform .25s,border-color .25s,box-shadow .25s;
+  }
+  .card:hover{transform:translateY(-4px);border-color:var(--line-2);box-shadow:0 18px 50px rgba(0,0,0,.45)}
+  .card-art{height:128px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .card-art svg{width:100%;height:100%;display:block}
+  .card-body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .card-tag{display:inline-flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--violet)}
+  .card-data{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--cyan);margin-left:auto}
+  .card-tagrow{display:flex;align-items:center}
+  .card h4{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.12rem;line-height:1.25;letter-spacing:-.01em}
+  .card p{font-size:.92rem;color:var(--slate);line-height:1.55}
+  .card .read{margin-top:auto;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.08em;color:var(--slate-dim);text-transform:uppercase}
+
+  /* ---------- AD SLOT ---------- */
+  .adwrap{padding:30px 0;text-align:center;border-bottom:1px solid var(--line)}
+  .adlabel{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--slate-dim);margin-bottom:10px}
+
+  /* ---------- FEATURE / LONGFORM ---------- */
+  .feature{display:grid;grid-template-columns:1.4fr 1fr;gap:50px;align-items:start}
+  .feature-body p{margin-bottom:18px;color:#C9D0E0;font-size:1.06rem;line-height:1.72}
+  .feature-body p:first-of-type::first-letter{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:3.4rem;float:left;
+    line-height:.82;margin:6px 12px 0 0;color:var(--cyan);
+  }
+  .pullquote{
+    border-left:2px solid var(--violet);padding:14px 0 14px 22px;margin:26px 0;
+    font-family:'Space Grotesk',sans-serif;font-size:1.25rem;line-height:1.4;color:var(--white);font-weight:500;
+  }
+  .feature-side{background:linear-gradient(160deg,var(--panel),var(--panel-2));border:1px solid var(--line);border-radius:8px;padding:26px}
+  .feature-side h5{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px}
+  .databar{margin-bottom:18px}
+  .databar:last-child{margin-bottom:0}
+  .databar .top{display:flex;justify-content:space-between;font-family:'Space Grotesk',sans-serif;font-size:.86rem;margin-bottom:7px}
+  .databar .top .v{font-family:'JetBrains Mono',monospace;color:var(--cyan)}
+  .track{height:6px;background:rgba(124,92,255,.12);border-radius:99px;overflow:hidden}
+  .fill{height:100%;background:linear-gradient(90deg,var(--cyan),var(--violet));border-radius:99px}
+
+  /* ---------- NEWSLETTER ---------- */
+  .news{background:linear-gradient(135deg,#0E1326,#1A1340);border:1px solid var(--line);border-radius:12px;padding:48px;position:relative;overflow:hidden}
+  .news::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 240px at 80% 30%,var(--glow-cyan),transparent 60%);opacity:.4;pointer-events:none}
+  .news-inner{position:relative;z-index:2;max-width:620px}
+  .news h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.9rem;letter-spacing:-.02em;margin-bottom:12px}
+  .news p{color:var(--slate);margin-bottom:24px;font-size:1.04rem}
+  form.signup{display:flex;gap:12px;flex-wrap:wrap}
+  .signup input{
+    flex:1;min-width:220px;background:rgba(11,14,26,.7);border:1px solid var(--line);
+    border-radius:4px;padding:13px 16px;color:var(--white);font-family:'Newsreader',serif;font-size:1rem;
+  }
+  .signup input:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(34,211,238,.12)}
+  .signup button{
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.92rem;
+    background:linear-gradient(90deg,var(--cyan),var(--violet));color:var(--void);
+    border:0;border-radius:4px;padding:13px 26px;cursor:pointer;transition:transform .2s,box-shadow .2s;
+  }
+  .signup button:hover{transform:translateY(-2px);box-shadow:0 10px 28px var(--glow-cyan)}
+  .form-note{margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--slate-dim)}
+  .form-ok{display:none;margin-top:16px;padding:14px 16px;border:1px solid var(--cyan);border-radius:4px;background:rgba(34,211,238,.06);color:var(--cyan);font-size:.92rem}
+
+  /* ---------- DISPATCH LIST ---------- */
+  .dispatch{display:grid;grid-template-columns:repeat(2,1fr);gap:0 50px}
+  .drow{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .drow:hover .dt{color:var(--cyan)}
+  .dnum{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--slate-dim);min-width:30px}
+  .dmeta{flex:1}
+  .dt{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:1.05rem;line-height:1.3;transition:color .2s;margin-bottom:4px}
+  .dd{font-size:.88rem;color:var(--slate)}
+  .ddate{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--slate-dim);white-space:nowrap}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:60px 0 40px;background:#080A12}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;margin-bottom:44px}
+  .foot-brand .brand{margin-bottom:14px}
+  .foot-brand p{color:var(--slate);font-size:.95rem;max-width:30em}
+  .foot-col h6{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate-dim);margin-bottom:16px}
+  .foot-col a{display:block;color:var(--slate);font-size:.94rem;margin-bottom:10px;transition:color .2s}
+  .foot-col a:hover{color:var(--cyan)}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
+  .foot-bottom p,.foot-bottom a{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--slate-dim)}
+  .foot-bottom a:hover{color:var(--slate)}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:900px){
+    .billboard-grid{grid-template-columns:1fr}
+    .bb-video{padding:28px 28px 0}
+    .bb-cta{padding:24px 28px 30px;border-left:0;border-top:1px solid var(--line)}
+    .hero-grid{grid-template-columns:1fr;gap:44px}
+    .qubit-stage{max-width:340px;margin:0 auto;order:-1}
+    .feature{grid-template-columns:1fr;gap:32px}
+    .cards{grid-template-columns:1fr 1fr}
+    .dispatch{grid-template-columns:1fr;gap:0}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:640px){
+    body{font-size:17px}
+    nav.main{display:none}
+    nav.main.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--void);border-bottom:1px solid var(--line);padding:18px 28px;gap:16px}
+    .burger{display:block}
+    .cards{grid-template-columns:1fr}
+    .hero-stats{gap:24px}
+    .news{padding:32px 24px}
+    .foot-grid{grid-template-columns:1fr}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  }
+  :focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<!-- ===== TOP BRAND BAR (Layout B) ===== -->
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a href="/" class="brand" aria-label="Quantum Media home"><span class="q">Q</span><span class="m">media</span><span class="tld">.in</span></a>
+    <nav class="main" id="nav">
+      <a href="#coverage">Coverage</a>
+      <a href="#feature">Analysis</a>
+      <a href="#dispatch">Briefing</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="/sponsorship.html" class="nav-cta">Partner with us</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Toggle menu">≡</button>
+  </div>
+</header>
+
+<!-- ===== BILLBOARD — first content block, top of page ===== -->
+<div class="billboard">
+  <div class="wrap billboard-grid">
+    <div class="bb-video">
+      <div class="frame">
+        <!--
+          Replace UUREPLACEWITHYOURCHANNELID with your channel's UPLOADS playlist ID.
+          Your Channel ID looks like UCxxxxxxxx. The uploads playlist is the same string
+          with UC swapped to UU (e.g. UCabc123 -> UUabc123). No API key needed.
+        -->
+        <iframe
+          src="https://www.youtube.com/embed?listType=playlist&list=UUREPLACEWITHYOURCHANNELID&autoplay=1&mute=1&loop=1&controls=1&modestbranding=1&rel=0"
+          title="Quantum Media video briefing"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="bb-cta">
+      <div class="bb-eyebrow"><span class="megaphone" aria-hidden="true">📣</span> Sponsored placement</div>
+      <h3>Reach the people building India's deep-tech frontier.</h3>
+      <p>Founders, lab directors, infrastructure buyers and the investors funding them read Quantum Media. Put your firm in front of a decision-grade audience — not an algorithm's leftovers.</p>
+      <a href="/sponsorship.html" class="bb-btn">Become a sponsor →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HERO — qubit state-grid signature ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-eyebrow">India · deep tech · the business of the frontier</div>
+      <h1>The frontier has a <em>balance sheet</em>. We cover it.</h1>
+      <p class="hero-lede">Quantum computing, AI infrastructure, semiconductors and the capital moving through them — reported for the people deciding where India's deep-tech money goes next.</p>
+      <div class="hero-stats">
+        <div class="hstat"><div class="n">₹6,000<span class="u">cr</span></div><div class="l">National Quantum Mission outlay</div></div>
+        <div class="hstat"><div class="n">2030</div><div class="l">India's stated 1,000-qubit target</div></div>
+        <div class="hstat"><div class="n">04</div><div class="l">Beats: quantum · AI infra · chips · capital</div></div>
+      </div>
+    </div>
+    <div class="qubit-stage">
+      <div class="lattice" id="lattice" aria-hidden="true">
+        <!-- 25 qubit cells, JS animates a subset between |0>, |1>, and superposition -->
+        <div class="qubit">|0⟩</div><div class="qubit on">|1⟩</div><div class="qubit">|0⟩</div><div class="qubit sup">ψ</div><div class="qubit">|0⟩</div>
+        <div class="qubit sup">ψ</div><div class="qubit">|0⟩</div><div class="qubit on">|1⟩</div><div class="qubit">|0⟩</div><div class="qubit">|1⟩</div>
+        <div class="qubit">|0⟩</div><div class="qubit on">|1⟩</div><div class="qubit sup">ψ</div><div class="qubit">|0⟩</div><div class="qubit on">|1⟩</div>
+        <div class="qubit">|1⟩</div><div class="qubit">|0⟩</div><div class="qubit">|0⟩</div><div class="qubit sup">ψ</div><div class="qubit">|0⟩</div>
+        <div class="qubit sup">ψ</div><div class="qubit">|0⟩</div><div class="qubit on">|1⟩</div><div class="qubit">|0⟩</div><div class="qubit">|1⟩</div>
+        <div class="qubit-cap">5×5 qubit register · live superposition</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COVERAGE ===== -->
+<section class="block" id="coverage">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-kicker">What we cover</div>
+        <h2 class="sec-title">Four beats, one frontier</h2>
+      </div>
+      <a href="#newsletter" class="sec-link">Get the weekly brief</a>
+    </div>
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-art">
+          <svg viewBox="0 0 320 128" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22D3EE" stop-opacity=".25"/><stop offset="1" stop-color="#7C5CFF" stop-opacity=".05"/></linearGradient></defs>
+            <rect width="320" height="128" fill="url(#g1)"/>
+            <circle cx="160" cy="64" r="38" fill="none" stroke="#22D3EE" stroke-width="1.2" opacity=".8"/>
+            <ellipse cx="160" cy="64" rx="60" ry="22" fill="none" stroke="#7C5CFF" stroke-width="1" opacity=".7"/>
+            <ellipse cx="160" cy="64" rx="60" ry="22" fill="none" stroke="#7C5CFF" stroke-width="1" opacity=".7" transform="rotate(60 160 64)"/>
+            <ellipse cx="160" cy="64" rx="60" ry="22" fill="none" stroke="#7C5CFF" stroke-width="1" opacity=".7" transform="rotate(120 160 64)"/>
+            <circle cx="160" cy="64" r="5" fill="#22D3EE"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-tagrow"><span class="card-tag">◈ Quantum</span><span class="card-data">qubits ↗</span></div>
+          <h4>The race from lab to logic gate</h4>
+          <p>Superconducting, photonic, trapped-ion — which architecture India's research institutes and startups are actually betting on, and why coherence time is the metric that matters.</p>
+          <span class="read">Beat overview</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art">
+          <svg viewBox="0 0 320 128" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C5CFF" stop-opacity=".25"/><stop offset="1" stop-color="#22D3EE" stop-opacity=".05"/></linearGradient></defs>
+            <rect width="320" height="128" fill="url(#g2)"/>
+            <g stroke="#22D3EE" stroke-width="1.1" opacity=".8" fill="none">
+              <rect x="48" y="40" width="40" height="48" rx="3"/><rect x="140" y="40" width="40" height="48" rx="3"/><rect x="232" y="40" width="40" height="48" rx="3"/>
+              <line x1="88" y1="64" x2="140" y2="64"/><line x1="180" y1="64" x2="232" y2="64"/>
+            </g>
+            <g fill="#7C5CFF"><circle cx="68" cy="64" r="3"/><circle cx="160" cy="64" r="3"/><circle cx="252" cy="64" r="3"/></g>
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-tagrow"><span class="card-tag">◈ AI infra</span><span class="card-data">FLOPs ↗</span></div>
+          <h4>Where India's compute lives</h4>
+          <p>GPU clusters, sovereign-AI data centres, the IndiaAI Mission's hardware buildout — the unglamorous infrastructure layer that decides who gets to train frontier models here.</p>
+          <span class="read">Beat overview</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art">
+          <svg viewBox="0 0 320 128" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22D3EE" stop-opacity=".22"/><stop offset="1" stop-color="#7C5CFF" stop-opacity=".05"/></linearGradient></defs>
+            <rect width="320" height="128" fill="url(#g3)"/>
+            <rect x="120" y="38" width="80" height="52" rx="4" fill="none" stroke="#22D3EE" stroke-width="1.2"/>
+            <g stroke="#7C5CFF" stroke-width="1" opacity=".85">
+              <line x1="120" y1="50" x2="104" y2="50"/><line x1="120" y1="64" x2="104" y2="64"/><line x1="120" y1="78" x2="104" y2="78"/>
+              <line x1="200" y1="50" x2="216" y2="50"/><line x1="200" y1="64" x2="216" y2="64"/><line x1="200" y1="78" x2="216" y2="78"/>
+              <line x1="138" y1="38" x2="138" y2="26"/><line x1="160" y1="38" x2="160" y2="26"/><line x1="182" y1="38" x2="182" y2="26"/>
+            </g>
+            <text x="160" y="69" text-anchor="middle" font-family="monospace" font-size="11" fill="#22D3EE">SoC</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-tagrow"><span class="card-tag">◈ Semiconductors</span><span class="card-data">nm ↘</span></div>
+          <h4>The fab India keeps promising</h4>
+          <p>Incentive schemes, the Gujarat and Assam plants, ATMP vs leading-edge fabrication — separating the announcements from the silicon that actually ships.</p>
+          <span class="read">Beat overview</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art">
+          <svg viewBox="0 0 320 128" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C5CFF" stop-opacity=".25"/><stop offset="1" stop-color="#22D3EE" stop-opacity=".06"/></linearGradient></defs>
+            <rect width="320" height="128" fill="url(#g4)"/>
+            <polyline points="40,96 92,78 132,84 176,52 220,60 280,30" fill="none" stroke="#22D3EE" stroke-width="2"/>
+            <g fill="#7C5CFF"><circle cx="92" cy="78" r="3"/><circle cx="176" cy="52" r="3"/><circle cx="280" cy="30" r="3.5"/></g>
+            <line x1="40" y1="104" x2="288" y2="104" stroke="#5C6478" stroke-width="1" opacity=".5"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-tagrow"><span class="card-tag">◈ Capital</span><span class="card-data">₹ ↗</span></div>
+          <h4>Who's funding the frontier</h4>
+          <p>Deep-tech VC, government grants, corporate R&D, the IIT spin-out pipeline — following the money from term sheet to tape-out across India's hard-tech ecosystem.</p>
+          <span class="read">Beat overview</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art">
+          <svg viewBox="0 0 320 128" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22D3EE" stop-opacity=".2"/><stop offset="1" stop-color="#7C5CFF" stop-opacity=".05"/></linearGradient></defs>
+            <rect width="320" height="128" fill="url(#g5)"/>
+            <g fill="none" stroke="#7C5CFF" stroke-width="1" opacity=".7">
+              <path d="M60 90 Q160 20 260 90"/><path d="M80 96 Q160 40 240 96"/>
+            </g>
+            <g fill="#22D3EE"><circle cx="60" cy="90" r="4"/><circle cx="260" cy="90" r="4"/><circle cx="160" cy="48" r="4"/></g>
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-tagrow"><span class="card-tag">◈ Policy</span><span class="card-data">gov ⟷</span></div>
+          <h4>The state as deep-tech investor</h4>
+          <p>National Quantum Mission, IndiaAI, the PLI maze — how policy and procurement shape which technologies get a runway and which quietly stall.</p>
+          <span class="read">Beat overview</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art">
+          <svg viewBox="0 0 320 128" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C5CFF" stop-opacity=".22"/><stop offset="1" stop-color="#22D3EE" stop-opacity=".05"/></linearGradient></defs>
+            <rect width="320" height="128" fill="url(#g6)"/>
+            <g stroke="#22D3EE" stroke-width="1.1" fill="none" opacity=".85">
+              <circle cx="160" cy="64" r="10"/><circle cx="110" cy="44" r="6"/><circle cx="210" cy="44" r="6"/><circle cx="100" cy="90" r="6"/><circle cx="220" cy="90" r="6"/>
+              <line x1="160" y1="64" x2="110" y2="44"/><line x1="160" y1="64" x2="210" y2="44"/><line x1="160" y1="64" x2="100" y2="90"/><line x1="160" y1="64" x2="220" y2="90"/>
+            </g>
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-tagrow"><span class="card-tag">◈ The builders</span><span class="card-data">people</span></div>
+          <h4>Profiles from the frontier</h4>
+          <p>The researchers, founders and operators turning physics into product. Long-form interviews with the people whose decisions compound across the whole ecosystem.</p>
+          <span class="read">Beat overview</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== AD SLOT (in-content) ===== -->
+<div class="adwrap">
+  <div class="wrap">
+    <div class="adlabel">Advertisement</div>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3216322039296830" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</div>
+
+<!-- ===== FEATURE / LONGFORM ===== -->
+<section class="block" id="feature">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-kicker">The long read</div>
+        <h2 class="sec-title">Why India's quantum bet is really an infrastructure bet</h2>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-body">
+        <p>Every headline about Indian quantum computing leads with qubit counts, because qubit counts make a clean number. But the people actually building the field will tell you the qubit is the easy part to talk about and the hardest part to keep alive. A qubit is a promise that decoheres — a fragile superposition that collapses the moment the surrounding system gets too warm, too noisy, or too poorly isolated. The frontier, in practice, is not the qubit. It is everything wrapped around it.</p>
+
+        <p>That reframing matters for where the money should go. A nation can announce a thousand-qubit target and still ship nothing useful if it skips the unglamorous layers underneath: the cryogenics, the control electronics, the error-correction stack, the fabrication tolerances, the supply chain for materials measured in parts per billion. India's National Quantum Mission, with its multi-thousand-crore outlay, is best read not as a race to a qubit number but as an attempt to build those layers at once — to manufacture an ecosystem, not a press release.</p>
+
+        <div class="pullquote">"The qubit is the promise. The infrastructure around it is whether the promise gets kept."</div>
+
+        <p>This is also where the commercial opportunity hides. The companies that win the early deep-tech decades are rarely the ones with the flashiest end-product; they are the ones that own a chokepoint in the stack — the dilution refrigerator, the specialised control chip, the EDA tooling, the foundry slot. For Indian founders and investors, the strategic question is less "can we build a quantum computer" and more "which layer of the global deep-tech supply chain can India credibly own." That is a sober, capital-allocation question. It is the question this publication exists to follow.</p>
+      </div>
+      <aside class="feature-side">
+        <h5>By the numbers</h5>
+        <div class="databar"><div class="top"><span>NQM outlay (2023–31)</span><span class="v">₹6,000cr</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="databar"><div class="top"><span>Stated qubit target by 2030</span><span class="v">~1,000</span></div><div class="track"><div class="fill" style="width:62%"></div></div></div>
+        <div class="databar"><div class="top"><span>IndiaAI compute (GPUs)</span><span class="v">scaling</span></div><div class="track"><div class="fill" style="width:48%"></div></div></div>
+        <div class="databar"><div class="top"><span>Dedicated Indian deep-tech publications</span><span class="v">few</span></div><div class="track"><div class="fill" style="width:18%"></div></div></div>
+        <p style="margin-top:18px;font-size:.82rem;color:var(--slate-dim);font-family:'JetBrains Mono',monospace;line-height:1.5">Figures are directional, drawn from public mission documents — illustrative of scale, not a data table.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="block" id="newsletter">
+  <div class="wrap">
+    <div class="news">
+      <div class="news-inner">
+        <h3>The Quantum Media brief</h3>
+        <p>One email. The week's most consequential moves in Indian quantum, AI infrastructure, chips and deep-tech capital — decoded for people who allocate time and money. No hype, no qubit-count theatre.</p>
+        <form class="signup" id="signupForm" novalidate>
+          <input type="text" id="su_name" placeholder="Your name" aria-label="Your name" required />
+          <input type="email" id="su_email" placeholder="Work email" aria-label="Work email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="form-note">Opens your mail app to confirm. We never display or sell your address.</div>
+        <div class="form-ok" id="signupOk">Your mail app is open with the subscription prefilled. Press send and you're on the list.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DISPATCH / BRIEFING LIST ===== -->
+<section class="block" id="dispatch">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-kicker">Recent briefings</div>
+        <h2 class="sec-title">The dispatch</h2>
+      </div>
+      <a href="#newsletter" class="sec-link">Subscribe for the full feed</a>
+    </div>
+    <div class="dispatch">
+      <div class="drow"><div class="dnum">01</div><div class="dmeta"><div class="dt">Reading the National Quantum Mission's hardware roadmap</div><div class="dd">What the thematic hubs reveal about India's architecture priorities.</div></div><div class="ddate">QUANTUM</div></div>
+      <div class="drow"><div class="dnum">02</div><div class="dmeta"><div class="dt">Sovereign compute: who actually owns India's GPUs</div><div class="dd">Inside the IndiaAI procurement and the economics of shared clusters.</div></div><div class="ddate">AI INFRA</div></div>
+      <div class="drow"><div class="dnum">03</div><div class="dmeta"><div class="dt">ATMP vs leading-edge: the fab debate, honestly</div><div class="dd">Why packaging may be India's faster route to silicon relevance.</div></div><div class="ddate">CHIPS</div></div>
+      <div class="drow"><div class="dnum">04</div><div class="dmeta"><div class="dt">The deep-tech term sheet is a different animal</div><div class="dd">Longer horizons, capex-heavy, grant-blended — how the math changes.</div></div><div class="ddate">CAPITAL</div></div>
+      <div class="drow"><div class="dnum">05</div><div class="dmeta"><div class="dt">Coherence time is the metric to watch, not qubit count</div><div class="dd">A field guide to reading quantum announcements skeptically.</div></div><div class="ddate">QUANTUM</div></div>
+      <div class="drow"><div class="dnum">06</div><div class="dmeta"><div class="dt">From IIT lab to spin-out: the commercialization gap</div><div class="dd">Where India's research-to-product pipeline leaks, and who's fixing it.</div></div><div class="ddate">CAPITAL</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="/" class="brand"><span class="q">Q</span><span class="m">media</span><span class="tld">.in</span></a>
+        <p>An independent intelligence brief on the business of quantum computing, AI infrastructure, semiconductors and deep tech in India. Reported for the people deciding where the frontier's money goes next.</p>
+      </div>
+      <div class="foot-col">
+        <h6>Sections</h6>
+        <a href="#coverage">Coverage</a>
+        <a href="#feature">Analysis</a>
+        <a href="#dispatch">Briefing</a>
+        <a href="#newsletter">Newsletter</a>
+      </div>
+      <div class="foot-col">
+        <h6>Publication</h6>
+        <a href="/sponsorship.html">Partner with us</a>
+        <a href="#newsletter">Subscribe</a>
+        <a href="/sponsorship.html">Advertising</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Quantum Media · Qmedia.in — All rights reserved.</p>
+      <div style="display:flex;gap:22px">
+        <a href="/sponsorship.html">Partnerships</a>
+        <a href="#newsletter">Editorial independence</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav
+  document.getElementById('burger').addEventListener('click',function(){
+    document.getElementById('nav').classList.toggle('open');
+  });
+
+  // Qubit lattice live animation — flicker a random subset between states
+  (function(){
+    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var cells = Array.prototype.slice.call(document.querySelectorAll('#lattice .qubit'));
+    var states = [
+      {cls:'', txt:'|0⟩'},
+      {cls:'on', txt:'|1⟩'},
+      {cls:'sup', txt:'ψ'}
+    ];
+    setInterval(function(){
+      var c = cells[Math.floor(Math.random()*cells.length)];
+      var s = states[Math.floor(Math.random()*states.length)];
+      c.className = 'qubit ' + s.cls;
+      c.textContent = s.txt;
+    }, 700);
+  })();
+
+  // Newsletter -> mailto with base64-obfuscated address (never in plain HTML)
+  (function(){
+    var enc = 'd2Vid29ya3NhMUBnbWFpbC5jb20='; // decoded only at submit time
+    var form = document.getElementById('signupForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = document.getElementById('su_name').value.trim();
+      var email = document.getElementById('su_email').value.trim();
+      if(!name || !email || email.indexOf('@')<1){ return; }
+      var to = atob(enc);
+      var subj = encodeURIComponent('Newsletter subscription — Qmedia.in');
+      var body = encodeURIComponent(
+        'New subscriber for the Quantum Media brief:\n\n' +
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n\n' +
+        'Source: qmedia.in newsletter form'
+      );
+      window.location.href = 'mailto:' + to + '?subject=' + subj + '&body=' + body;
+      form.style.display='none';
+      document.getElementById('signupOk').style.display='block';
+    });
+  })();
+</script>
+</body>
+</html>
